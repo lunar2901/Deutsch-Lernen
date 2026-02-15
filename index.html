@@ -4,222 +4,304 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>Deutsch Fokus</title>
+    <title>Deutsch Pro - Fokus & Übung</title>
     <style>
         :root {
-            --ios-blue: #007AFF;
-            --ios-bg: #FFFFFF;
-            --card-inner: #F2F2F7;
-            --text-main: #1C1C1E;
-            --text-sec: #636366;
-            --der: #007AFF;
-            --die: #FF2D55;
-            --das: #5856D6;
+            --primary: #5D5FEF;
+            --bg: #F0F2F8;
+            --card-bg: #FFFFFF;
+            --text: #2D3436;
+            --text-light: #636E72;
+            --success: #00B894;
+            --error: #D63031;
+            --warning: #F1C40F;
+            --ios-shadow: 0 10px 30px rgba(0,0,0,0.08);
         }
 
         body {
-            font-family: -apple-system, system-ui, sans-serif;
-            background-color: var(--ios-bg);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
             margin: 0;
             display: flex;
             flex-direction: column;
             height: 100vh;
+            color: var(--text);
             overflow: hidden;
         }
 
-        /* Top Header Area */
-        header {
-            padding: 40px 20px 10px;
-            text-align: center;
+        /* Top Navigation Tabs */
+        .tabs {
+            display: flex;
+            background: #E0E0E0;
+            margin: 20px auto;
+            border-radius: 15px;
+            width: 85%;
+            max-width: 400px;
+            padding: 4px;
         }
-
-        .search-bar {
-            width: 90%;
+        .tab {
+            flex: 1;
             padding: 10px;
-            border-radius: 10px;
-            border: none;
-            background: #E3E3E8;
+            text-align: center;
+            font-weight: 700;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .tab.active { background: var(--card-bg); color: var(--primary); box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+
+        /* Search Bar Area */
+        header { padding: 0 20px 10px; text-align: center; }
+        .search-input {
+            width: 100%;
+            max-width: 500px;
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid #DDD;
             font-size: 16px;
             outline: none;
         }
 
-        /* Main Focused Page Area */
-        #pageContainer {
+        /* Main App Container */
+        #app {
             flex: 1;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            justify-content: center;
-            padding: 20px;
+            padding: 10px 20px;
+            overflow-y: auto;
+            padding-bottom: 100px;
         }
 
-        .focused-card {
+        .card {
+            background: var(--card-bg);
             width: 100%;
-            max-width: 400px;
-            animation: fadeIn 0.3s ease-out;
+            max-width: 600px;
+            border-radius: 25px;
+            padding: 25px;
+            box-shadow: var(--ios-shadow);
+            animation: slideUp 0.4s ease-out;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .main-word {
-            font-size: 42px;
-            font-weight: 800;
-            margin-bottom: 5px;
-            display: block;
-        }
+        /* Word UI Styling */
+        .word-title { font-size: 42px; font-weight: 800; color: var(--primary); margin: 0; }
+        .word-type { display: inline-block; background: var(--primary); color: white; padding: 4px 12px; border-radius: 8px; font-size: 12px; margin-top: 10px; text-transform: uppercase; }
+        
+        .section-header { font-weight: 700; font-size: 18px; margin-top: 25px; color: var(--primary); display: flex; align-items: center; gap: 10px; }
+        
+        .info-box { background: #F8F9FF; border-radius: 15px; padding: 18px; margin-top: 10px; line-height: 1.5; }
+        .example-box { background: #FFF9E6; border-left: 5px solid var(--warning); padding: 15px; border-radius: 12px; margin-top: 15px; }
 
-        .category-tag {
-            font-size: 14px;
-            color: var(--text-sec);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-            display: block;
-        }
+        /* Variations Styling */
+        .var-item { border-bottom: 1px solid #EEE; padding: 12px 0; }
+        .var-item:last-child { border-bottom: none; }
+        .var-name { color: var(--primary); font-weight: 700; font-size: 16px; }
 
-        .info-section {
-            background: var(--card-inner);
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        .definition { font-size: 20px; font-weight: 600; margin-bottom: 10px; color: #000; }
-        .example { font-style: italic; color: #444; border-left: 3px solid var(--ios-blue); padding-left: 10px; margin: 10px 0; }
-
-        /* Variation List */
-        .variations-title { font-weight: 700; margin-top: 20px; font-size: 18px; color: var(--ios-blue); }
-        .var-item {
-            margin-top: 15px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #DDD;
-        }
-        .var-form { font-weight: 700; background: var(--ios-blue); color: white; padding: 2px 6px; border-radius: 5px; margin-right: 5px; }
-
-        /* Navigation Footer */
-        nav {
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            border-top: 1px solid #EEE;
-            background: #FAFAFA;
-        }
-
-        button {
-            background: var(--ios-blue);
-            color: white;
+        /* Exercise Mode UI */
+        .quiz-container { text-align: center; width: 100%; }
+        .quiz-sentence { font-size: 22px; margin: 30px 0; line-height: 1.6; }
+        .quiz-input {
             border: none;
-            padding: 12px 25px;
-            border-radius: 12px;
-            font-size: 16px;
-            font-weight: 600;
+            border-bottom: 3px solid var(--primary);
+            font-size: 24px;
+            text-align: center;
+            width: 200px;
+            outline: none;
+            padding: 5px;
+            margin-bottom: 20px;
+        }
+        .btn-check { 
+            background: var(--primary); 
+            color: white; border: none; 
+            padding: 15px 40px; border-radius: 15px; 
+            font-size: 18px; font-weight: 700; 
             cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .btn-check:active { transform: scale(0.95); }
+
+        /* Feedback UI */
+        #feedback {
+            margin-top: 25px;
+            padding: 15px;
+            border-radius: 15px;
+            font-weight: 700;
+            display: none;
+        }
+        .shake { animation: shake 0.4s; }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-10px); }
+            75% { transform: translateX(10px); }
         }
 
-        button:disabled { background: #CCC; }
-
-        /* Genders */
-        .der { color: var(--der); }
-        .die { color: var(--die); }
-        .das { color: var(--das); }
+        /* Bottom Navigation Bar */
+        nav {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: white;
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-around;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.05);
+            z-index: 100;
+        }
+        .nav-btn { background: #F0F0F0; border: none; font-size: 22px; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; color: var(--primary); }
     </style>
 </head>
 <body>
 
+<div class="tabs">
+    <div id="learnTab" class="tab active" onclick="setMode('learn')">Lernen</div>
+    <div id="quizTab" class="tab" onclick="setMode('quiz')">Übung</div>
+</div>
+
 <header>
-    <input type="text" id="searchInput" class="search-bar" placeholder="Suchen...">
+    <input type="text" id="searchInput" class="search-input" placeholder="Suchen...">
 </header>
 
-<div id="pageContainer">
-    </div>
+<div id="app">
+    <p>Lade Vokabeln...</p>
+</div>
 
 <nav>
-    <button id="prevBtn" onclick="changePage(-1)">Zurück</button>
-    <span id="counter" style="align-self: center; color: var(--text-sec);">0 / 0</span>
-    <button id="nextBtn" onclick="changePage(1)">Weiter</button>
+    <button class="nav-btn" onclick="move(-1)">←</button>
+    <span id="counter" style="align-self:center; font-weight:bold; color:var(--text-light);">0 / 0</span>
+    <button class="nav-btn" onclick="move(1)">→</button>
 </nav>
 
 <script>
     let vocabData = [];
     let currentIndex = 0;
+    let currentMode = 'learn';
 
-    async function loadVocab() {
+    async function loadData() {
         try {
             const response = await fetch('german-vocab-1000.json');
             vocabData = await response.json();
-            renderPage();
-        } catch (e) {
-            document.getElementById('pageContainer').innerHTML = "Fehler beim Laden.";
+            render();
+        } catch (error) {
+            document.getElementById('app').innerHTML = "Fehler beim Laden der JSON-Datei.";
         }
     }
 
-    function renderPage() {
-        const container = document.getElementById('pageContainer');
+    function setMode(mode) {
+        currentMode = mode;
+        document.getElementById('learnTab').classList.toggle('active', mode === 'learn');
+        document.getElementById('quizTab').classList.toggle('active', mode === 'quiz');
+        render();
+    }
+
+    function render() {
         const item = vocabData[currentIndex];
-        const counter = document.getElementById('counter');
+        const container = document.getElementById('app');
+        document.getElementById('counter').innerText = `${currentIndex + 1} / ${vocabData.length}`;
 
-        counter.innerText = `${currentIndex + 1} / ${vocabData.length}`;
-        
-        let articleClass = item.article ? item.article.toLowerCase() : "";
-
-        container.innerHTML = `
-            <div class="focused-card">
-                <span class="category-tag">${item.category || item.type}</span>
-                <span class="main-word ${articleClass}">${item.article ? item.article + ' ' : ''}${item.word}</span>
-                <div style="margin-bottom: 20px; color: var(--text-sec); font-style: italic;">
-                    ${item.conjugation || ''} ${item.plural ? ' | Plural: ' + item.plural : ''}
-                </div>
-
-                <div class="info-section">
-                    <div class="definition">${item.meanings[0].definition}</div>
-                    <div class="example">
-                        "${item.meanings[0].examples[0]?.de || ''}"<br>
-                        <small style="color: #888;">${item.meanings[0].examples[0]?.en || ''}</small>
+        if (currentMode === 'learn') {
+            container.innerHTML = `
+                <div class="card">
+                    <h1 class="word-title">${item.word}</h1>
+                    <span class="word-type">${item.category || item.type}</span>
+                    
+                    <div class="section-header">📝 Konjugation</div>
+                    <div class="info-box" style="font-style: italic; color: var(--primary); font-weight:bold;">
+                        ${item.conjugation || 'N/A'}
                     </div>
-                </div>
 
-                ${item.variations && item.variations.length > 0 ? `
-                    <div class="variations-title">Variationen & Präfixe</div>
-                    <div style="max-height: 250px; overflow-y: auto;">
-                        ${item.variations.map(v => `
-                            <div class="var-item">
-                                <span class="var-form">${v.form}</span> <strong>${v.meaning}</strong>
-                                <div style="font-size: 13px; color: #666; margin-top:5px;">
-                                    Z.B.: Ein Wort mit vielen Möglichkeiten.
+                    <div class="section-header">💡 Bedeutung & Gebrauch</div>
+                    <div class="info-box">
+                        <strong style="font-size: 20px;">${item.meanings[0].definition}</strong>
+                        <div class="example-box">
+                            <div style="font-weight: 700; color: #D35400;">DE: ${item.meanings[0].examples[0].de}</div>
+                            <div style="color: #7F8C8D; font-size: 14px;">EN: ${item.meanings[0].examples[0].en}</div>
+                        </div>
+                    </div>
+
+                    ${item.variations.length > 0 ? `
+                        <div class="section-header">🔄 Variationen & Präfixe</div>
+                        <div class="info-box">
+                            ${item.variations.map(v => `
+                                <div class="var-item">
+                                    <span class="var-name">${v.form}</span><br>
+                                    <span style="font-size: 14px; color: var(--text-light);">${v.meaning}</span>
                                 </div>
-                            </div>
-                        `).join('')}
-                    </div>
-                ` : ''}
-            </div>
-        `;
+                            `).join('')}
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+        } else {
+            // QUIZ MODE
+            const sentence = item.meanings[0].examples[0].de;
+            const hiddenWord = item.word;
+            // Create blank
+            const prompt = sentence.replace(new RegExp(hiddenWord, 'gi'), '_______');
 
-        document.getElementById('prevBtn').disabled = currentIndex === 0;
-        document.getElementById('nextBtn').disabled = currentIndex === vocabData.length - 1;
+            container.innerHTML = `
+                <div class="card quiz-container">
+                    <h2 style="color: var(--text-light)">Fülle die Lücke aus:</h2>
+                    <p style="color: var(--primary); font-weight: bold;">Hint: ${item.meanings[0].definition}</p>
+                    <div class="quiz-sentence">${prompt}</div>
+                    <input type="text" id="answerInput" class="quiz-input" placeholder="Antwort..." autocomplete="off">
+                    <br>
+                    <button class="btn-check" onclick="checkAnswer('${hiddenWord}')">Prüfen</button>
+                    <div id="feedback"></div>
+                </div>
+            `;
+        }
     }
 
-    function changePage(step) {
-        currentIndex += step;
-        renderPage();
+    function checkAnswer(correct) {
+        const input = document.getElementById('answerInput');
+        const feedback = document.getElementById('feedback');
+        const userVal = input.value.toLowerCase().trim();
+
+        feedback.style.display = "block";
+
+        if (userVal === correct.toLowerCase()) {
+            feedback.innerHTML = `✅ Richtig! "${correct}" ist korrekt.`;
+            feedback.style.color = var(--success);
+            feedback.style.backgroundColor = "#E6FFF9";
+            input.style.borderColor = var(--success);
+            
+            // Auto-advance
+            setTimeout(() => move(1), 1500);
+        } else {
+            input.classList.add('shake');
+            setTimeout(() => input.classList.remove('shake'), 400);
+            feedback.innerHTML = `❌ Nicht ganz. Die Antwort ist "${correct}".`;
+            feedback.style.color = var(--error);
+            feedback.style.backgroundColor = "#FFE6E6";
+            input.value = "";
+            input.placeholder = `Fängt mit "${correct[0]}" an...`;
+        }
     }
 
-    // Direct Search Logic
+    function move(step) {
+        currentIndex = (currentIndex + step + vocabData.length) % vocabData.length;
+        render();
+    }
+
+    // Search Logic
     document.getElementById('searchInput').addEventListener('keypress', function (e) {
         if (e.key === 'Enter') {
             const val = this.value.toLowerCase();
-            const foundIndex = vocabData.findIndex(i => i.word.toLowerCase() === val);
-            if (foundIndex !== -1) {
-                currentIndex = foundIndex;
-                renderPage();
-                this.value = "";
+            const found = vocabData.findIndex(i => i.word.toLowerCase() === val);
+            if (found !== -1) {
+                currentIndex = found;
+                render();
                 this.blur();
             }
         }
     });
 
-    loadVocab();
+    loadData();
 </script>
 
 </body>
