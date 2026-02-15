@@ -4,190 +4,221 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <title>Deutsch Pro</title>
+    <title>Deutsch Fokus</title>
     <style>
         :root {
             --ios-blue: #007AFF;
-            --ios-bg: #F2F2F7;
-            --card-bg: #FFFFFF;
+            --ios-bg: #FFFFFF;
+            --card-inner: #F2F2F7;
             --text-main: #1C1C1E;
-            --text-sec: #8E8E93;
-            --accent: #34C759;
-            --der: #007AFF; /* Blue for masculine */
-            --die: #FF2D55; /* Red for feminine */
-            --das: #5856D6; /* Purple for neutral */
+            --text-sec: #636366;
+            --der: #007AFF;
+            --die: #FF2D55;
+            --das: #5856D6;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, system-ui, sans-serif;
             background-color: var(--ios-bg);
-            color: var(--text-main);
             margin: 0;
-            padding: 20px;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            height: 100vh;
+            overflow: hidden;
         }
 
-        .app-container { width: 100%; max-width: 500px; }
-
-        header { margin-bottom: 20px; text-align: center; }
+        /* Top Header Area */
+        header {
+            padding: 40px 20px 10px;
+            text-align: center;
+        }
 
         .search-bar {
-            width: 100%;
-            padding: 14px;
-            border-radius: 12px;
+            width: 90%;
+            padding: 10px;
+            border-radius: 10px;
             border: none;
             background: #E3E3E8;
-            margin-bottom: 20px;
-            font-size: 17px;
-            box-sizing: border-box;
+            font-size: 16px;
             outline: none;
         }
 
-        .card {
-            background: var(--card-bg);
-            border-radius: 20px;
+        /* Main Focused Page Area */
+        #pageContainer {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-bottom: 15px;
         }
 
-        .word-header {
+        .focused-card {
+            width: 100%;
+            max-width: 400px;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .main-word {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .category-tag {
+            font-size: 14px;
+            color: var(--text-sec);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .info-section {
+            background: var(--card-inner);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .definition { font-size: 20px; font-weight: 600; margin-bottom: 10px; color: #000; }
+        .example { font-style: italic; color: #444; border-left: 3px solid var(--ios-blue); padding-left: 10px; margin: 10px 0; }
+
+        /* Variation List */
+        .variations-title { font-weight: 700; margin-top: 20px; font-size: 18px; color: var(--ios-blue); }
+        .var-item {
+            margin-top: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #DDD;
+        }
+        .var-form { font-weight: 700; background: var(--ios-blue); color: white; padding: 2px 6px; border-radius: 5px; margin-right: 5px; }
+
+        /* Navigation Footer */
+        nav {
+            padding: 20px;
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            margin-bottom: 8px;
+            border-top: 1px solid #EEE;
+            background: #FAFAFA;
         }
 
-        .word { font-size: 26px; font-weight: 800; }
-        .type { font-size: 12px; color: var(--text-sec); text-transform: uppercase; border: 1px solid #DDD; padding: 2px 6px; border-radius: 4px; }
+        button {
+            background: var(--ios-blue);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+        }
 
-        /* Article colors */
+        button:disabled { background: #CCC; }
+
+        /* Genders */
         .der { color: var(--der); }
         .die { color: var(--die); }
         .das { color: var(--das); }
-
-        .conjugation { color: #555; font-size: 14px; font-style: italic; margin-bottom: 10px; }
-        
-        .meaning-section {
-            border-top: 1px solid #F2F2F7;
-            padding-top: 12px;
-            margin-top: 10px;
-        }
-
-        .definition { font-weight: 600; color: var(--text-main); font-size: 18px; }
-        
-        .example-de { color: #333; margin-top: 8px; display: block; padding-left: 10px; border-left: 2px solid var(--ios-blue); }
-        .example-en { font-size: 14px; color: var(--text-sec); display: block; padding-left: 12px; }
-
-        .variations-container {
-            margin-top: 15px;
-            padding: 10px;
-            background: #F8F9FF;
-            border-radius: 10px;
-        }
-
-        .var-badge {
-            display: inline-block;
-            background: var(--ios-blue);
-            color: white;
-            padding: 2px 8px;
-            border-radius: 6px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-right: 5px;
-        }
     </style>
 </head>
 <body>
 
-<div class="app-container">
-    <header>
-        <h1>Deutsch Pro</h1>
-    </header>
+<header>
+    <input type="text" id="searchInput" class="search-bar" placeholder="Suchen...">
+</header>
 
-    <input type="text" id="searchInput" class="search-bar" placeholder="Suchen... (z.B. kommen, Haus)">
-
-    <div id="wordList">
-        <p style="text-align:center; color: var(--text-sec);">Lade Vokabeln...</p>
+<div id="pageContainer">
     </div>
-</div>
+
+<nav>
+    <button id="prevBtn" onclick="changePage(-1)">Zurück</button>
+    <span id="counter" style="align-self: center; color: var(--text-sec);">0 / 0</span>
+    <button id="nextBtn" onclick="changePage(1)">Weiter</button>
+</nav>
 
 <script>
     let vocabData = [];
+    let currentIndex = 0;
 
-    // 1. Fetch the JSON file from your GitHub repository
     async function loadVocab() {
         try {
-            // Replace with your actual file name if different
-            const response = await fetch('german-vocab-1000.json'); 
+            const response = await fetch('german-vocab-1000.json');
             vocabData = await response.json();
-            renderWords();
-        } catch (error) {
-            console.error("Error loading JSON:", error);
-            document.getElementById('wordList').innerHTML = `<p style="color:red">Fehler beim Laden der Datei. Stellen Sie sicher, dass die JSON-Datei im selben Ordner liegt.</p>`;
+            renderPage();
+        } catch (e) {
+            document.getElementById('pageContainer').innerHTML = "Fehler beim Laden.";
         }
     }
 
-    function renderWords(filter = "") {
-        const container = document.getElementById('wordList');
-        container.innerHTML = "";
+    function renderPage() {
+        const container = document.getElementById('pageContainer');
+        const item = vocabData[currentIndex];
+        const counter = document.getElementById('counter');
 
-        const filtered = vocabData.filter(item => 
-            item.word.toLowerCase().includes(filter.toLowerCase()) ||
-            (item.meanings[0].definition && item.meanings[0].definition.toLowerCase().includes(filter.toLowerCase()))
-        );
+        counter.innerText = `${currentIndex + 1} / ${vocabData.length}`;
+        
+        let articleClass = item.article ? item.article.toLowerCase() : "";
 
-        if (filtered.length === 0) {
-            container.innerHTML = `<p style="text-align:center; color:var(--text-sec);">Keine Ergebnisse gefunden.</p>`;
-            return;
-        }
-
-        filtered.forEach(item => {
-            const card = document.createElement('div');
-            card.className = 'card';
-            
-            // Determine article color if it's a noun
-            let articleClass = "";
-            if(item.article) articleClass = item.article.toLowerCase();
-
-            card.innerHTML = `
-                <div class="word-header">
-                    <span class="word ${articleClass}">${item.article ? item.article + ' ' : ''}${item.word}</span>
-                    <span class="type">${item.category || item.type}</span>
+        container.innerHTML = `
+            <div class="focused-card">
+                <span class="category-tag">${item.category || item.type}</span>
+                <span class="main-word ${articleClass}">${item.article ? item.article + ' ' : ''}${item.word}</span>
+                <div style="margin-bottom: 20px; color: var(--text-sec); font-style: italic;">
+                    ${item.conjugation || ''} ${item.plural ? ' | Plural: ' + item.plural : ''}
                 </div>
-                ${item.conjugation ? `<div class="conjugation">${item.conjugation}</div>` : ''}
-                ${item.plural && item.plural !== '-' ? `<div class="conjugation">Plural: ${item.plural}</div>` : ''}
-                
-                <div class="meaning-section">
+
+                <div class="info-section">
                     <div class="definition">${item.meanings[0].definition}</div>
-                    <span class="example-de">${item.meanings[0].examples[0]?.de || ''}</span>
-                    <span class="example-en">${item.meanings[0].examples[0]?.en || ''}</span>
+                    <div class="example">
+                        "${item.meanings[0].examples[0]?.de || ''}"<br>
+                        <small style="color: #888;">${item.meanings[0].examples[0]?.en || ''}</small>
+                    </div>
                 </div>
 
                 ${item.variations && item.variations.length > 0 ? `
-                    <div class="variations-container">
-                        <strong>Variationen:</strong>
+                    <div class="variations-title">Variationen & Präfixe</div>
+                    <div style="max-height: 250px; overflow-y: auto;">
                         ${item.variations.map(v => `
-                            <div style="margin-top:8px;">
-                                <span class="var-badge">${v.form}</span> <span>${v.meaning}</span>
+                            <div class="var-item">
+                                <span class="var-form">${v.form}</span> <strong>${v.meaning}</strong>
+                                <div style="font-size: 13px; color: #666; margin-top:5px;">
+                                    Z.B.: Ein Wort mit vielen Möglichkeiten.
+                                </div>
                             </div>
                         `).join('')}
                     </div>
                 ` : ''}
-            `;
-            container.appendChild(card);
-        });
+            </div>
+        `;
+
+        document.getElementById('prevBtn').disabled = currentIndex === 0;
+        document.getElementById('nextBtn').disabled = currentIndex === vocabData.length - 1;
     }
 
-    // Search event listener
-    document.getElementById('searchInput').addEventListener('input', (e) => {
-        renderWords(e.target.value);
+    function changePage(step) {
+        currentIndex += step;
+        renderPage();
+    }
+
+    // Direct Search Logic
+    document.getElementById('searchInput').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            const val = this.value.toLowerCase();
+            const foundIndex = vocabData.findIndex(i => i.word.toLowerCase() === val);
+            if (foundIndex !== -1) {
+                currentIndex = foundIndex;
+                renderPage();
+                this.value = "";
+                this.blur();
+            }
+        }
     });
 
-    // Start
     loadVocab();
 </script>
 
