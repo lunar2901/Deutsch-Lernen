@@ -2,118 +2,1001 @@
   {
     "word": "kommen",
     "type": "Verb",
-    "category": "Verb",
+    "category": "Movement",
     "conjugation": "kommt, kam, ist gekommen",
-    "grammar_notes": "Movement verb using 'sein' as an auxiliary. Often used with 'aus' for origin (Ich komme aus...) or 'zu' for destination.",
     "meanings": [
       {
         "definition": "to come, to arrive",
-        "usage": "General movement toward the speaker or a destination.",
-        "examples": [
-          { "de": "Wann kommst du nach Hause?", "en": "When are you coming home?" }
-        ]
+        "usage": "Movement towards the speaker.",
+        "examples": [{ "de": "Wann kommst du nach Hause?", "en": "When are you coming home?" }]
       }
     ],
     "variations": [
-      {
-        "form": "reinkommen",
-        "meaning": "to come in / to enter",
-        "usage": "Colloquial short form of 'hereinkommen' or 'hineinkommen'. Used almost exclusively in spoken German.",
-        "examples": [{ "de": "Darf ich reinkommen?", "en": "May I come in?" }]
-      },
-      {
-        "form": "bekommen",
-        "meaning": "to get / to receive",
-        "usage": "IMPORTANT: False friend! Does NOT mean 'to become'. It means receiving a gift, news, or a illness.",
-        "examples": [{ "de": "Ich habe eine E-Mail bekommen.", "en": "I received an email." }]
-      },
-      {
-        "form": "ankommen",
-        "meaning": "to arrive",
-        "usage": "Focuses on reaching a destination. Separable.",
-        "examples": [{ "de": "Der Zug kommt pünktlich an.", "en": "The train is arriving on time." }]
-      },
-      {
-        "form": "mitkommen",
-        "meaning": "to come along",
-        "usage": "Joining someone already in motion.",
-        "examples": [{ "de": "Kommst du mit?", "en": "Are you coming along?" }]
-      }
-    ],
-    "related_nouns": [
-      {
-        "word": "das Einkommen",
-        "meaning": "income / salary",
-        "usage": "Note: The verb 'einkommen' is rare and formal; usually 'Einkommen' refers to the money you earn monthly.",
-        "examples": [{ "de": "Sein Einkommen ist hoch.", "en": "His income is high." }]
-      }
+      { "form": "bekommen", "meaning": "to receive / get", "usage": "FALSE FRIEND: Not 'become'. Receiving gifts/news." },
+      { "form": "ankommen", "meaning": "to arrive", "usage": "Separable. Focus on reaching a destination." },
+      { "form": "mitkommen", "meaning": "to come along", "usage": "Joining others." },
+      { "form": "reinkommen", "meaning": "to come in", "usage": "Colloquial for entering a room." },
+      { "form": "vorkommen", "meaning": "to occur / happen", "usage": "Events happening." }
     ]
   },
   {
     "word": "gehen",
     "type": "Verb",
-    "category": "Verb",
+    "category": "Movement",
     "conjugation": "geht, ging, ist gegangen",
-    "grammar_notes": "Irregular verb. Always uses 'sein' in perfect tense. Frequently used impersonally: 'Es geht...'",
     "meanings": [
       {
         "definition": "to go, to walk",
-        "usage": "Standard movement away from a place. Also used for physical functioning or general status.",
-        "examples": [
-          { "de": "Wie geht es dir?", "en": "How are you? (lit: How is it going for you?)" },
-          { "de": "Die Uhr geht nicht.", "en": "The clock isn't working." }
-        ]
+        "usage": "Movement away or general state (Wie geht's?).",
+        "examples": [{ "de": "Ich gehe jetzt.", "en": "I'm leaving now." }]
       }
     ],
     "variations": [
-      {
-        "form": "rausgehen",
-        "meaning": "to go out / leave",
-        "usage": "Colloquial for 'hinausgehen'. Standard for leaving a building or going out socially.",
-        "examples": [{ "de": "Wir gehen heute Abend raus.", "en": "We're going out tonight." }]
-      },
-      {
-        "form": "vergehen",
-        "meaning": "to pass (time) / fade",
-        "usage": "Inseparable. Used for time passing or appetite/pain fading.",
-        "examples": [{ "de": "Die Zeit vergeht schnell.", "en": "Time passes quickly." }]
-      },
-      {
-        "form": "nachgehen",
-        "meaning": "to pursue / follow / be slow",
-        "usage": "Separable. Used for pursuing a hobby or a clock that is slow.",
-        "examples": [{ "de": "Ich gehe meinem Hobby nach.", "en": "I pursue my hobby." }]
-      }
+      { "form": "ausgehen", "meaning": "to go out / turn off", "usage": "Socializing or lights turning off." },
+      { "form": "rausgehen", "meaning": "to go outside", "usage": "Exiting a building." },
+      { "form": "vergehen", "meaning": "to pass (time)", "usage": "Time passing by." },
+      { "form": "eingehen", "meaning": "to shrink / enter", "usage": "Clothes shrinking or entering an agreement." }
     ]
   },
   {
-    "word": "wissen",
+    "word": "stehen",
     "type": "Verb",
-    "category": "Verb",
-    "conjugation": "weiß, wusste, hat gewusst",
-    "grammar_notes": "A 'mixed' verb with vowel changes. Use for facts, information, or things you can summarize with 'dass' (that).",
+    "category": "Position",
+    "conjugation": "steht, stand, hat gestanden",
     "meanings": [
       {
-        "definition": "to know (facts)",
-        "usage": "Contrast with 'kennen' (familiarity with people/places).",
-        "examples": [
-          { "de": "Ich weiß das nicht.", "en": "I don't know that." }
-        ]
+        "definition": "to stand",
+        "usage": "Vertical static position.",
+        "examples": [{ "de": "Der Bus steht an der Ecke.", "en": "The bus is standing at the corner." }]
       }
     ],
     "variations": [
+      { "form": "verstehen", "meaning": "to understand", "usage": "Mental comprehension." },
+      { "form": "aufstehen", "meaning": "to get up / wake up", "usage": "Leaving bed." },
+      { "form": "bestehen", "meaning": "to pass (exam) / exist", "usage": "Success or existence." },
+      { "form": "entstehen", "meaning": "to originate / develop", "usage": "Something new being created." }
+    ]
+  },
+  {
+    "word": "stellen",
+    "type": "Verb",
+    "category": "Action",
+    "conjugation": "stellt, stellte, hat gestellt",
+    "meanings": [
       {
-        "form": "Bescheid wissen",
-        "meaning": "to be informed / in the loop",
-        "usage": "Very common idiom in professional or social settings.",
-        "examples": [{ "de": "Ich weiß Bescheid.", "en": "I know the situation / I'm informed." }]
-      },
-      {
-        "form": "auswendig wissen",
-        "meaning": "to know by heart",
-        "usage": "Used for memorized information like phone numbers or poems.",
-        "examples": [{ "de": "Er weiß das Gedicht auswendig.", "en": "He knows the poem by heart." }]
+        "definition": "to place (upright)",
+        "usage": "Active action of putting something vertically.",
+        "examples": [{ "de": "Ich stelle die Flasche auf den Tisch.", "en": "I put the bottle on the table." }]
       }
+    ],
+    "variations": [
+      { "form": "bestellen", "meaning": "to order", "usage": "Food or products." },
+      { "form": "vorstellen", "meaning": "to introduce / imagine", "usage": "Introducing self or imagining something." },
+      { "form": "einstellen", "meaning": "to adjust / hire", "usage": "Settings or employment." },
+      { "form": "abstellen", "meaning": "to turn off / park", "usage": "Parking a car or turning off water." }
+    ]
+  },
+  {
+    "word": "liegen",
+    "type": "Verb",
+    "category": "Position",
+    "conjugation": "liegt, lag, hat gelegen",
+    "meanings": [
+      {
+        "definition": "to lie (flat)",
+        "usage": "Horizontal static position.",
+        "examples": [{ "de": "Das Buch liegt auf dem Sofa.", "en": "The book is lying on the sofa." }]
+      }
+    ],
+    "variations": [
+      { "form": "anliegen", "meaning": "to concern / fit tight", "usage": "A matter of concern or tight clothes." },
+      { "form": "beiliegen", "meaning": "to be enclosed", "usage": "Documents inside an envelope." }
+    ]
+  },
+  {
+    "word": "legen",
+    "type": "Verb",
+    "category": "Action",
+    "conjugation": "legt, legte, hat gelegt",
+    "meanings": [
+      {
+        "definition": "to lay (flat)",
+        "usage": "Active action of putting something horizontally.",
+        "examples": [{ "de": "Leg den Stift hin.", "en": "Lay the pen down." }]
+      }
+    ],
+    "variations": [
+      { "form": "überlegen", "meaning": "to consider / think", "usage": "Thinking it over." },
+      { "form": "anlegen", "meaning": "to invest / put on", "usage": "Money or equipment." },
+      { "form": "beilegen", "meaning": "to settle / enclose", "usage": "Settling a dispute or adding a document." }
+    ]
+  },
+  {
+    "word": "setzen",
+    "type": "Verb",
+    "category": "Action",
+    "conjugation": "setzt, setzte, hat gesetzt",
+    "meanings": [
+      {
+        "definition": "to set, to sit (active)",
+        "usage": "Placing something or oneself ('sich setzen') down.",
+        "examples": [{ "de": "Ich setze mich auf den Stuhl.", "en": "I sit (myself) on the chair." }]
+      }
+    ],
+    "variations": [
+      { "form": "übersetzen", "meaning": "to translate", "usage": "Changing languages." },
+      { "form": "ersetzen", "meaning": "to replace", "usage": "Swapping old for new." },
+      { "form": "besetzen", "meaning": "to occupy", "usage": "Seats or territories." },
+      { "form": "einsetzen", "meaning": "to insert / employ", "usage": "Using resources or inserting parts." }
+    ]
+  },
+  {
+    "word": "sitzen",
+    "type": "Verb",
+    "category": "Position",
+    "conjugation": "sitzt, saß, hat gesessen",
+    "meanings": [
+      {
+        "definition": "to sit",
+        "usage": "Static position on a seat.",
+        "examples": [{ "de": "Er sitzt im Garten.", "en": "He is sitting in the garden." }]
+      }
+    ],
+    "variations": [
+      { "form": "besitzen", "meaning": "to own / possess", "usage": "Having property." },
+      { "form": "aussitzen", "meaning": "to wait out", "usage": "Waiting for a problem to pass." }
+    ]
+  },
+  {
+    "word": "machen",
+    "type": "Verb",
+    "category": "Action",
+    "conjugation": "macht, machte, hat gemacht",
+    "meanings": [
+      {
+        "definition": "to do, to make",
+        "usage": "Universal action verb.",
+        "examples": [{ "de": "Das macht nichts.", "en": "That doesn't matter (lit: makes nothing)." }]
+      }
+    ],
+    "variations": [
+      { "form": "aufmachen", "meaning": "to open", "usage": "Doors, windows." },
+      { "form": "zumachen", "meaning": "to close", "usage": "Opposite of aufmachen." },
+      { "form": "anmachen", "meaning": "to turn on / flirt", "usage": "Electronics." },
+      { "form": "ausmachen", "meaning": "to turn off", "usage": "Electronics." },
+      { "form": "mitmachen", "meaning": "to participate", "usage": "Joining in." }
+    ]
+  },
+  {
+    "word": "geben",
+    "type": "Verb",
+    "category": "Action",
+    "conjugation": "gibt, gab, hat gegeben",
+    "meanings": [
+      {
+        "definition": "to give",
+        "usage": "Transferring possession. Also 'Es gibt' (There is/are).",
+        "examples": [{ "de": "Gib mir das bitte.", "en": "Give that to me please." }]
+      }
+    ],
+    "variations": [
+      { "form": "aufgeben", "meaning": "to give up / quit", "usage": "Stopping a task." },
+      { "form": "ausgeben", "meaning": "to spend (money)", "usage": "Spending cash." },
+      { "form": "zugeben", "meaning": "to admit", "usage": "Confessing truth." },
+      { "form": "angeben", "meaning": "to show off / specify", "usage": "Boasting or stating details." }
+    ]
+  },
+  {
+    "word": "nehmen",
+    "type": "Verb",
+    "category": "Action",
+    "conjugation": "nimmt, nahm, hat genommen",
+    "meanings": [
+      {
+        "definition": "to take",
+        "usage": "Grabbing or selecting.",
+        "examples": [{ "de": "Ich nehme den Kaffee.", "en": "I'll take the coffee." }]
+      }
+    ],
+    "variations": [
+      { "form": "mitnehmen", "meaning": "to take along", "usage": "Take with you." },
+      { "form": "abnehmen", "meaning": "to lose weight / remove", "usage": "Dieting or removing objects." },
+      { "form": "zunehmen", "meaning": "to gain weight / increase", "usage": "Opposite of abnehmen." },
+      { "form": "annehmen", "meaning": "to accept / assume", "usage": "Taking an offer or guessing." },
+      { "form": "unternehmen", "meaning": "to undertake", "usage": "Doing an activity." }
+    ]
+  },
+  {
+    "word": "halten",
+    "type": "Verb",
+    "category": "Action",
+    "conjugation": "hält, hielt, hat gehalten",
+    "meanings": [
+      {
+        "definition": "to hold, to stop, to keep",
+        "usage": "Physical holding or vehicle stopping.",
+        "examples": [{ "de": "Der Bus hält hier.", "en": "The bus stops here." }]
+      }
+    ],
+    "variations": [
+      { "form": "behalten", "meaning": "to keep", "usage": "Not giving back." },
+      { "form": "erhalten", "meaning": "to receive / preserve", "usage": "Formal getting or saving." },
+      { "form": "unterhalten", "meaning": "to entertain / chat", "usage": "Talking ('sich unterhalten')." },
+      { "form": "aushalten", "meaning": "to endure / bear", "usage": "Withstanding pain/stress." }
+    ]
+  },
+  {
+    "word": "ziehen",
+    "type": "Verb",
+    "category": "Action",
+    "conjugation": "zieht, zog, hat gezogen",
+    "meanings": [
+      {
+        "definition": "to pull, to move (house)",
+        "usage": "Opposite of push, or changing residence.",
+        "examples": [{ "de": "Wir ziehen nach Berlin.", "en": "We are moving to Berlin." }]
+      }
+    ],
+    "variations": [
+      { "form": "umziehen", "meaning": "to move house / change clothes", "usage": "Relocating." },
+      { "form": "anziehen", "meaning": "to dress / attract", "usage": "Putting on clothes." },
+      { "form": "ausziehen", "meaning": "to undress / move out", "usage": "Taking off clothes." },
+      { "form": "erziehen", "meaning": "to raise / educate", "usage": "Raising children." }
+    ]
+  },
+  {
+    "word": "lassen",
+    "type": "Verb",
+    "category": "Auxiliary",
+    "conjugation": "lässt, ließ, hat gelassen",
+    "meanings": [
+      {
+        "definition": "to let, to allow, to leave",
+        "usage": "Allowing something or leaving it behind.",
+        "examples": [{ "de": "Lass mich in Ruhe!", "en": "Leave me alone!" }]
+      }
+    ],
+    "variations": [
+      { "form": "verlassen", "meaning": "to leave / abandon", "usage": "Leaving a place/person forever." },
+      { "form": "zulassen", "meaning": "to allow / admit", "usage": "Permitting." },
+      { "form": "hinterlassen", "meaning": "to leave behind", "usage": "Messages or inheritance." }
+    ]
+  },
+  {
+    "word": "sehen",
+    "type": "Verb",
+    "category": "Senses",
+    "conjugation": "sieht, sah, hat gesehen",
+    "meanings": [
+      {
+        "definition": "to see",
+        "usage": "Visual perception.",
+        "examples": [{ "de": "Ich sehe dich.", "en": "I see you." }]
+      }
+    ],
+    "variations": [
+      { "form": "fernsehen", "meaning": "to watch TV", "usage": "Core hobby." },
+      { "form": "aussehen", "meaning": "to look (appearance)", "usage": "You look good/tired." },
+      { "form": "ansehen", "meaning": "to look at / watch", "usage": "Watching a specific thing." },
+      { "form": "nachsehen", "meaning": "to check / look up", "usage": "Checking information." }
+    ]
+  },
+  {
+    "word": "hören",
+    "type": "Verb",
+    "category": "Senses",
+    "conjugation": "hört, hörte, hat gehört",
+    "meanings": [
+      {
+        "definition": "to hear",
+        "usage": "Auditory perception.",
+        "examples": [{ "de": "Hörst du das?", "en": "Do you hear that?" }]
+      }
+    ],
+    "variations": [
+      { "form": "aufhören", "meaning": "to stop / quit", "usage": "Ending an action." },
+      { "form": "zuhören", "meaning": "to listen to", "usage": "Paying attention to sound." },
+      { "form": "gehören", "meaning": "to belong to", "usage": "Ownership." }
+    ]
+  },
+  {
+    "word": "sprechen",
+    "type": "Verb",
+    "category": "Communication",
+    "conjugation": "spricht, sprach, hat gesprochen",
+    "meanings": [
+      {
+        "definition": "to speak",
+        "usage": "Talking languages or general speech.",
+        "examples": [{ "de": "Sprichst du Deutsch?", "en": "Do you speak German?" }]
+      }
+    ],
+    "variations": [
+      { "form": "versprechen", "meaning": "to promise", "usage": "Giving your word." },
+      { "form": "besprechen", "meaning": "to discuss", "usage": "Talking over a topic." },
+      { "form": "aussprechen", "meaning": "to pronounce", "usage": "Saying words correctly." },
+      { "form": "widersprechen", "meaning": "to contradict", "usage": "Disagreeing." }
+    ]
+  },
+  {
+    "word": "sagen",
+    "type": "Verb",
+    "category": "Communication",
+    "conjugation": "sagt, sagte, hat gesagt",
+    "meanings": [
+      {
+        "definition": "to say",
+        "usage": "Stating something.",
+        "examples": [{ "de": "Was hast du gesagt?", "en": "What did you say?" }]
+      }
+    ],
+    "variations": [
+      { "form": "absagen", "meaning": "to cancel", "usage": "Appointments." },
+      { "form": "zusagen", "meaning": "to accept", "usage": "Invitations." },
+      { "form": "ansagen", "meaning": "to announce", "usage": "Public announcements." }
+    ]
+  },
+  {
+    "word": "fahren",
+    "type": "Verb",
+    "category": "Movement",
+    "conjugation": "fährt, fuhr, ist gefahren",
+    "meanings": [
+      {
+        "definition": "to drive, to travel",
+        "usage": "Movement with a vehicle.",
+        "examples": [{ "de": "Wir fahren nach München.", "en": "We are driving to Munich." }]
+      }
+    ],
+    "variations": [
+      { "form": "abfahren", "meaning": "to depart", "usage": "Train/bus leaving." },
+      { "form": "mitfahren", "meaning": "to ride along", "usage": "Passenger." },
+      { "form": "erfahren", "meaning": "to experience / find out", "usage": "Learning news." },
+      { "form": "verfahren", "meaning": "to get lost (driving)", "usage": "'Sich verfahren'." }
+    ]
+  },
+  {
+    "word": "tragen",
+    "type": "Verb",
+    "category": "Action",
+    "conjugation": "trägt, trug, hat getragen",
+    "meanings": [
+      {
+        "definition": "to carry, to wear",
+        "usage": "Holding weight or clothes.",
+        "examples": [{ "de": "Sie trägt ein rotes Kleid.", "en": "She is wearing a red dress." }]
+      }
+    ],
+    "variations": [
+      { "form": "ertragen", "meaning": "to bear / stand", "usage": "Tolerating something." },
+      { "form": "betragen", "meaning": "to amount to", "usage": "Numbers/Costs." },
+      { "form": "beantragen", "meaning": "to apply for", "usage": "Visa/Documents." }
+    ]
+  },
+  {
+    "word": "schlagen",
+    "type": "Verb",
+    "category": "Action",
+    "conjugation": "schlägt, schlug, hat geschlagen",
+    "meanings": [
+      {
+        "definition": "to hit, to beat",
+        "usage": "Physical impact.",
+        "examples": [{ "de": "Das Herz schlägt.", "en": "The heart beats." }]
+      }
+    ],
+    "variations": [
+      { "form": "vorschlagen", "meaning": "to suggest", "usage": "Giving an idea." },
+      { "form": "nachschlagen", "meaning": "to look up (book)", "usage": "Checking a dictionary." },
+      { "form": "zuschlagen", "meaning": "to strike / slam", "usage": "Door slamming or taking a deal." }
+    ]
+  },
+  {
+    "word": "brechen",
+    "type": "Verb",
+    "category": "Action",
+    "conjugation": "bricht, brach, hat gebrochen",
+    "meanings": [
+      {
+        "definition": "to break",
+        "usage": "Damaging something.",
+        "examples": [{ "de": "Das Glas bricht leicht.", "en": "The glass breaks easily." }]
+      }
+    ],
+    "variations": [
+      { "form": "zerbrechen", "meaning": "to shatter", "usage": "Breaking into pieces." },
+      { "form": "unterbrechen", "meaning": "to interrupt", "usage": "Stopping someone speaking." },
+      { "form": "einbrechen", "meaning": "to break in", "usage": "Burglary." },
+      { "form": "ausbrechen", "meaning": "to escape / erupt", "usage": "Prison escape or volcano." }
+    ]
+  },
+  {
+    "word": "fallen",
+    "type": "Verb",
+    "category": "Movement",
+    "conjugation": "fällt, fiel, ist gefallen",
+    "meanings": [
+      {
+        "definition": "to fall",
+        "usage": "Dropping down.",
+        "examples": [{ "de": "Der Apfel fällt vom Baum.", "en": "The apple falls from the tree." }]
+      }
+    ],
+    "variations": [
+      { "form": "gefallen", "meaning": "to please / like", "usage": "'Das gefällt mir' (I like that)." },
+      { "form": "auffallen", "meaning": "to stand out / notice", "usage": "Being noticeable." },
+      { "form": "einfallen", "meaning": "to occur to / come to mind", "usage": "Having an idea." },
+      { "form": "ausfallen", "meaning": "to be cancelled", "usage": "Events/Trains." }
+    ]
+  },
+  {
+    "word": "Arbeit",
+    "type": "Noun",
+    "category": "Work",
+    "article": "die",
+    "plural": "Arbeiten",
+    "meanings": [
+      {
+        "definition": "work, job",
+        "usage": "Professional tasks.",
+        "examples": [{ "de": "Ich gehe zur Arbeit.", "en": "I go to work." }]
+      }
+    ],
+    "variations": [
+      { "form": "Arbeitsplatz", "meaning": "workplace", "usage": "Location of work." },
+      { "form": "Zusammenarbeit", "meaning": "collaboration", "usage": "Working together." },
+      { "form": "Hausarbeit", "meaning": "housework", "usage": "Chores." },
+      { "form": "arbeitslos", "meaning": "unemployed", "usage": "Without work." }
+    ]
+  },
+  {
+    "word": "Zeit",
+    "type": "Noun",
+    "category": "Time",
+    "article": "die",
+    "plural": "Zeiten",
+    "meanings": [
+      {
+        "definition": "time",
+        "usage": "General concept.",
+        "examples": [{ "de": "Hast du Zeit?", "en": "Do you have time?" }]
+      }
+    ],
+    "variations": [
+      { "form": "Freizeit", "meaning": "free time", "usage": "Leisure." },
+      { "form": "Zeitpunkt", "meaning": "point in time", "usage": "Specific moment." },
+      { "form": "Zeitraum", "meaning": "period of time", "usage": "Duration." },
+      { "form": "derzeit", "meaning": "currently", "usage": "At the moment." }
+    ]
+  },
+  {
+    "word": "Weg",
+    "type": "Noun",
+    "category": "Direction",
+    "article": "der",
+    "plural": "Wege",
+    "meanings": [
+      {
+        "definition": "way, path",
+        "usage": "Route or abstract way.",
+        "examples": [{ "de": "Das ist der falsche Weg.", "en": "That is the wrong way." }]
+      }
+    ],
+    "variations": [
+      { "form": "Ausweg", "meaning": "way out", "usage": "Exit or solution." },
+      { "form": "Umweg", "meaning": "detour", "usage": "Longer route." },
+      { "form": "unterwegs", "meaning": "on the way", "usage": "Traveling." },
+      { "form": "weglaufen", "meaning": "to run away", "usage": "Fleeing." }
+    ]
+  },
+  {
+    "word": "Haus",
+    "type": "Noun",
+    "category": "Buildings",
+    "article": "das",
+    "plural": "Häuser",
+    "meanings": [
+      {
+        "definition": "house",
+        "usage": "Building.",
+        "examples": [{ "de": "Ich bin zu Hause.", "en": "I am at home." }]
+      }
+    ],
+    "variations": [
+      { "form": "Zuhause", "meaning": "home (abstract)", "usage": "Feeling of home." },
+      { "form": "Krankenhaus", "meaning": "hospital", "usage": "Sick-house." },
+      { "form": "Rathaus", "meaning": "town hall", "usage": "Council-house." },
+      { "form": "Hochhaus", "meaning": "skyscraper", "usage": "High-house." }
+    ]
+  },
+  {
+    "word": "Hand",
+    "type": "Noun",
+    "category": "Body",
+    "article": "die",
+    "plural": "Hände",
+    "meanings": [
+      {
+        "definition": "hand",
+        "usage": "Body part.",
+        "examples": [{ "de": "Gib mir deine Hand.", "en": "Give me your hand." }]
+      }
+    ],
+    "variations": [
+      { "form": "Handtuch", "meaning": "towel", "usage": "Hand-cloth." },
+      { "form": "Handschuh", "meaning": "glove", "usage": "Hand-shoe." },
+      { "form": "handeln", "meaning": "to act / trade", "usage": "Doing something." },
+      { "form": "behandeln", "meaning": "to treat", "usage": "Medical or social treatment." }
+    ]
+  },
+  {
+    "word": "Kopf",
+    "type": "Noun",
+    "category": "Body",
+    "article": "der",
+    "plural": "Köpfe",
+    "meanings": [
+      {
+        "definition": "head",
+        "usage": "Body part.",
+        "examples": [{ "de": "Ich habe Kopfschmerzen.", "en": "I have a headache." }]
+      }
+    ],
+    "variations": [
+      { "form": "Kopfhörer", "meaning": "headphones", "usage": "Head-listeners." },
+      { "form": "aus dem Kopf", "meaning": "from memory", "usage": "Knowing by heart." },
+      { "form": "Kopftuch", "meaning": "headscarf", "usage": "Head-cloth." }
+    ]
+  },
+  {
+    "word": "gut",
+    "type": "Adjective",
+    "category": "Quality",
+    "meanings": [
+      {
+        "definition": "good",
+        "usage": "Positive quality.",
+        "examples": [{ "de": "Mir geht es gut.", "en": "I am doing well." }]
+      }
+    ],
+    "variations": [
+      { "form": "besser", "meaning": "better", "usage": "Comparative." },
+      { "form": "am besten", "meaning": "best", "usage": "Superlative." },
+      { "form": "Guten Tag", "meaning": "Good day", "usage": "Greeting." },
+      { "form": "wiedergutmachen", "meaning": "to make amends", "usage": "Fixing a mistake." }
+    ]
+  },
+  {
+    "word": "groß",
+    "type": "Adjective",
+    "category": "Size",
+    "meanings": [
+      {
+        "definition": "big, tall",
+        "usage": "Size or height.",
+        "examples": [{ "de": "Er ist sehr groß.", "en": "He is very tall." }]
+      }
+    ],
+    "variations": [
+      { "form": "größer", "meaning": "bigger", "usage": "Comparative." },
+      { "form": "Großeltern", "meaning": "grandparents", "usage": "Grand-parents." },
+      { "form": "großartig", "meaning": "great / awesome", "usage": "Very positive." },
+      { "form": "vergrößern", "meaning": "to enlarge", "usage": "Making bigger." }
+    ]
+  },
+  {
+    "word": "klein",
+    "type": "Adjective",
+    "category": "Size",
+    "meanings": [
+      {
+        "definition": "small, little",
+        "usage": "Opposite of groß.",
+        "examples": [{ "de": "Die Wohnung ist klein.", "en": "The apartment is small." }]
+      }
+    ],
+    "variations": [
+      { "form": "Kleingeld", "meaning": "change (coins)", "usage": "Small money." },
+      { "form": "Kleidung", "meaning": "clothing", "usage": "Related root." },
+      { "form": "verkleinern", "meaning": "to reduce", "usage": "Making smaller." }
+    ]
+  },
+  {
+    "word": "schön",
+    "type": "Adjective",
+    "category": "Quality",
+    "meanings": [
+      {
+        "definition": "beautiful, nice",
+        "usage": "Aesthetics.",
+        "examples": [{ "de": "Das ist schön.", "en": "That is nice." }]
+      }
+    ],
+    "variations": [
+      { "form": "wunderschön", "meaning": "wonderful", "usage": "Very beautiful." },
+      { "form": "schon", "meaning": "already", "usage": "FALSE FRIEND (no umlaut)." },
+      { "form": "Schönheit", "meaning": "beauty", "usage": "Noun form." }
+    ]
+  },
+  {
+    "word": "alt",
+    "type": "Adjective",
+    "category": "Age",
+    "meanings": [
+      {
+        "definition": "old",
+        "usage": "Age of people or things.",
+        "examples": [{ "de": "Wie alt bist du?", "en": "How old are you?" }]
+      }
+    ],
+    "variations": [
+      { "form": "Alter", "meaning": "age", "usage": "Noun." },
+      { "form": "altern", "meaning": "to age", "usage": "Getting older." },
+      { "form": "Alltag", "meaning": "daily life", "usage": "Different root but looks similar." }
+    ]
+  },
+  {
+    "word": "neu",
+    "type": "Adjective",
+    "category": "Age",
+    "meanings": [
+      {
+        "definition": "new",
+        "usage": "Recent condition.",
+        "examples": [{ "de": "Das Auto ist neu.", "en": "The car is new." }]
+      }
+    ],
+    "variations": [
+      { "form": "Neues", "meaning": "news / something new", "usage": "Noun usage." },
+      { "form": "erneuern", "meaning": "to renew", "usage": "Renovating." },
+      { "form": "neugierig", "meaning": "curious", "usage": "Greedy for new things." }
+    ]
+  },
+  {
+    "word": "stark",
+    "type": "Adjective",
+    "category": "Quality",
+    "meanings": [
+      {
+        "definition": "strong",
+        "usage": "Physical or mental power.",
+        "examples": [{ "de": "Der Kaffee ist stark.", "en": "The coffee is strong." }]
+      }
+    ],
+    "variations": [
+      { "form": "Stärke", "meaning": "strength", "usage": "Noun." },
+      { "form": "verstärken", "meaning": "to reinforce", "usage": "Making stronger." },
+      { "form": "stark sein", "meaning": "to be strong", "usage": "Idiom." }
+    ]
+  },
+  {
+    "word": "schwach",
+    "type": "Adjective",
+    "category": "Quality",
+    "meanings": [
+      {
+        "definition": "weak",
+        "usage": "Lacking strength.",
+        "examples": [{ "de": "Ich fühle mich schwach.", "en": "I feel weak." }]
+      }
+    ],
+    "variations": [
+      { "form": "Schwäche", "meaning": "weakness", "usage": "Noun." },
+      { "form": "abschwächen", "meaning": "to weaken / tone down", "usage": "Reducing intensity." }
+    ]
+  },
+  {
+    "word": "hoch",
+    "type": "Adjective",
+    "category": "Dimension",
+    "meanings": [
+      {
+        "definition": "high, tall",
+        "usage": "Height.",
+        "examples": [{ "de": "Der Berg ist hoch.", "en": "The mountain is high." }]
+      }
+    ],
+    "variations": [
+      { "form": "Höhe", "meaning": "height", "usage": "Noun." },
+      { "form": "erhöhen", "meaning": "to increase", "usage": "Prices/Volume." },
+      { "form": "Hochzeit", "meaning": "wedding", "usage": "High-time." }
+    ]
+  },
+  {
+    "word": "tief",
+    "type": "Adjective",
+    "category": "Dimension",
+    "meanings": [
+      {
+        "definition": "deep, low",
+        "usage": "Depth.",
+        "examples": [{ "de": "Das Wasser ist tief.", "en": "The water is deep." }]
+      }
+    ],
+    "variations": [
+      { "form": "Tiefe", "meaning": "depth", "usage": "Noun." },
+      { "form": "vertiefen", "meaning": "to deepen", "usage": "Knowledge/Hole." }
+    ]
+  },
+  {
+    "word": "weit",
+    "type": "Adjective",
+    "category": "Dimension",
+    "meanings": [
+      {
+        "definition": "far, wide",
+        "usage": "Distance.",
+        "examples": [{ "de": "Es ist nicht weit.", "en": "It is not far." }]
+      }
+    ],
+    "variations": [
+      { "form": "weiter", "meaning": "further / continue", "usage": "Comparison or 'Go on'." },
+      { "form": "erweitern", "meaning": "to expand", "usage": "Making wider." },
+      { "form": "weltweit", "meaning": "worldwide", "usage": "World-wide." }
+    ]
+  },
+  {
+    "word": "nah",
+    "type": "Adjective",
+    "category": "Dimension",
+    "meanings": [
+      {
+        "definition": "near, close",
+        "usage": "Proximity.",
+        "examples": [{ "de": "Er wohnt nah.", "en": "He lives nearby." }]
+      }
+    ],
+    "variations": [
+      { "form": "Nähe", "meaning": "proximity / vicinity", "usage": "Noun." },
+      { "form": "annähern", "meaning": "to approach", "usage": "Coming closer." },
+      { "form": "nächstes", "meaning": "next", "usage": "Superlative form." }
+    ]
+  },
+  {
+    "word": "Wasser",
+    "type": "Noun",
+    "category": "Nature",
+    "article": "das",
+    "plural": "Wässer",
+    "meanings": [
+      {
+        "definition": "water",
+        "usage": "Basic liquid.",
+        "examples": [{ "de": "Ich trinke Wasser.", "en": "I drink water." }]
+      }
+    ],
+    "variations": [
+      { "form": "Mineralwasser", "meaning": "sparkling water", "usage": "Standard German drink." },
+      { "form": "Leitungswasser", "meaning": "tap water", "usage": "Pipe-water." },
+      { "form": "Abwasser", "meaning": "sewage", "usage": "Waste-water." }
+    ]
+  },
+  {
+    "word": "Wort",
+    "type": "Noun",
+    "category": "Communication",
+    "article": "das",
+    "plural": "Wörter/Worte",
+    "meanings": [
+      {
+        "definition": "word",
+        "usage": "Unit of language.",
+        "examples": [{ "de": "Ich verstehe kein Wort.", "en": "I don't understand a word." }]
+      }
+    ],
+    "variations": [
+      { "form": "Wörterbuch", "meaning": "dictionary", "usage": "Words-book." },
+      { "form": "antworten", "meaning": "to answer", "usage": "Giving a word back." },
+      { "form": "verantwortlich", "meaning": "responsible", "usage": "Answerable." }
+    ]
+  },
+  {
+    "word": "Land",
+    "type": "Noun",
+    "category": "Geography",
+    "article": "das",
+    "plural": "Länder",
+    "meanings": [
+      {
+        "definition": "country, land, countryside",
+        "usage": "Nation or rural area.",
+        "examples": [{ "de": "Deutschland ist ein schönes Land.", "en": "Germany is a beautiful country." }]
+      }
+    ],
+    "variations": [
+      { "form": "Ausland", "meaning": "abroad", "usage": "Out-land." },
+      { "form": "Landschaft", "meaning": "landscape", "usage": "Scenery." },
+      { "form": "landen", "meaning": "to land", "usage": "Plane arriving." }
+    ]
+  },
+  {
+    "word": "Stadt",
+    "type": "Noun",
+    "category": "Geography",
+    "article": "die",
+    "plural": "Städte",
+    "meanings": [
+      {
+        "definition": "city, town",
+        "usage": "Urban area.",
+        "examples": [{ "de": "Ich wohne in der Stadt.", "en": "I live in the city." }]
+      }
+    ],
+    "variations": [
+      { "form": "Innenstadt", "meaning": "downtown / city center", "usage": "Inner-city." },
+      { "form": "Vorstadt", "meaning": "suburb", "usage": "Before-city." },
+      { "form": "stattfinden", "meaning": "to take place", "usage": "Happening (false friend lookalike)." }
+    ]
+  },
+  {
+    "word": "Tag",
+    "type": "Noun",
+    "category": "Time",
+    "article": "der",
+    "plural": "Tage",
+    "meanings": [
+      {
+        "definition": "day",
+        "usage": "24 hours.",
+        "examples": [{ "de": "Guten Tag!", "en": "Good day!" }]
+      }
+    ],
+    "variations": [
+      { "form": "täglich", "meaning": "daily", "usage": "Adjective." },
+      { "form": "Mittag", "meaning": "noon", "usage": "Mid-day." },
+      { "form": "Geburtstag", "meaning": "birthday", "usage": "Birth-day." },
+      { "form": "heute", "meaning": "today", "usage": "This day." }
+    ]
+  },
+  {
+    "word": "Nacht",
+    "type": "Noun",
+    "category": "Time",
+    "article": "die",
+    "plural": "Nächte",
+    "meanings": [
+      {
+        "definition": "night",
+        "usage": "Darkness time.",
+        "examples": [{ "de": "Gute Nacht!", "en": "Good night!" }]
+      }
+    ],
+    "variations": [
+      { "form": "nachts", "meaning": "at night", "usage": "Adverb." },
+      { "form": "übernachten", "meaning": "to stay over", "usage": "Sleeping over." },
+      { "form": "Mitternacht", "meaning": "midnight", "usage": "Mid-night." }
+    ]
+  },
+  {
+    "word": "Jahr",
+    "type": "Noun",
+    "category": "Time",
+    "article": "das",
+    "plural": "Jahre",
+    "meanings": [
+      {
+        "definition": "year",
+        "usage": "365 days.",
+        "examples": [{ "de": "Frohes neues Jahr!", "en": "Happy New Year!" }]
+      }
+    ],
+    "variations": [
+      { "form": "jährlich", "meaning": "yearly", "usage": "Adjective." },
+      { "form": "Jahreszeit", "meaning": "season", "usage": "Year-time." },
+      { "form": "Jahrhundert", "meaning": "century", "usage": "Year-hundred." }
+    ]
+  },
+  {
+    "word": "Mann",
+    "type": "Noun",
+    "category": "People",
+    "article": "der",
+    "plural": "Männer",
+    "meanings": [
+      {
+        "definition": "man, husband",
+        "usage": "Male adult.",
+        "examples": [{ "de": "Das ist mein Mann.", "en": "That is my husband." }]
+      }
+    ],
+    "variations": [
+      { "form": "Mannschaft", "meaning": "team", "usage": "Group of people." },
+      { "form": "jemand", "meaning": "someone", "usage": "Indefinite person." },
+      { "form": "niemand", "meaning": "no one", "usage": "No person." }
+    ]
+  },
+  {
+    "word": "Frau",
+    "type": "Noun",
+    "category": "People",
+    "article": "die",
+    "plural": "Frauen",
+    "meanings": [
+      {
+        "definition": "woman, wife, Mrs.",
+        "usage": "Female adult or title.",
+        "examples": [{ "de": "Das ist meine Frau.", "en": "That is my wife." }]
+      }
+    ],
+    "variations": [
+      { "form": "Hausfrau", "meaning": "housewife", "usage": "Home-woman." },
+      { "form": "kaufmännisch", "meaning": "commercial", "usage": "Related to merchants." }
+    ]
+  },
+  {
+    "word": "Kind",
+    "type": "Noun",
+    "category": "People",
+    "article": "das",
+    "plural": "Kinder",
+    "meanings": [
+      {
+        "definition": "child",
+        "usage": "Young person.",
+        "examples": [{ "de": "Ich habe zwei Kinder.", "en": "I have two children." }]
+      }
+    ],
+    "variations": [
+      { "form": "Kindheit", "meaning": "childhood", "usage": "Time of being a child." },
+      { "form": "Kindergarten", "meaning": "kindergarten", "usage": "Children-garden." },
+      { "form": "kindisch", "meaning": "childish", "usage": "Negative maturity." }
+    ]
+  },
+  {
+    "word": "Freund",
+    "type": "Noun",
+    "category": "People",
+    "article": "der",
+    "plural": "Freunde",
+    "meanings": [
+      {
+        "definition": "friend, boyfriend",
+        "usage": "Close companion.",
+        "examples": [{ "de": "Das ist mein Freund.", "en": "That is my boyfriend/friend." }]
+      }
+    ],
+    "variations": [
+      { "form": "Freundschaft", "meaning": "friendship", "usage": "Relationship." },
+      { "form": "freundlich", "meaning": "friendly", "usage": "Nice." },
+      { "form": "Gastfreundschaft", "meaning": "hospitality", "usage": "Guest-friendship." }
+    ]
+  },
+  {
+    "word": "Augen",
+    "type": "Noun",
+    "category": "Body",
+    "article": "das",
+    "plural": "Augen",
+    "meanings": [
+      {
+        "definition": "eye",
+        "usage": "Organ of sight.",
+        "examples": [{ "de": "Er hat blaue Augen.", "en": "He has blue eyes." }]
+      }
+    ],
+    "variations": [
+      { "form": "Augenblick", "meaning": "moment", "usage": "Eye-glance (blink)." },
+      { "form": "Augenzeuge", "meaning": "eyewitness", "usage": "Eye-witness." },
+      { "form": "blauäugig", "meaning": "naive", "usage": "Blue-eyed (idiom)." }
+    ]
+  },
+  {
+    "word": "Ende",
+    "type": "Noun",
+    "category": "Abstract",
+    "article": "das",
+    "plural": "Enden",
+    "meanings": [
+      {
+        "definition": "end",
+        "usage": "Conclusion.",
+        "examples": [{ "de": "Das ist das Ende.", "en": "This is the end." }]
+      }
+    ],
+    "variations": [
+      { "form": "endlich", "meaning": "finally", "usage": "At last." },
+      { "form": "beenden", "meaning": "to finish", "usage": "Making an end." },
+      { "form": "Wochenende", "meaning": "weekend", "usage": "Week-end." }
     ]
   }
 ]
