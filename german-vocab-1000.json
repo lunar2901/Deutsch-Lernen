@@ -1,0 +1,119 @@
+[
+  {
+    "word": "kommen",
+    "type": "Verb",
+    "category": "Verb",
+    "conjugation": "kommt, kam, ist gekommen",
+    "grammar_notes": "Movement verb using 'sein' as an auxiliary. Often used with 'aus' for origin (Ich komme aus...) or 'zu' for destination.",
+    "meanings": [
+      {
+        "definition": "to come, to arrive",
+        "usage": "General movement toward the speaker or a destination.",
+        "examples": [
+          { "de": "Wann kommst du nach Hause?", "en": "When are you coming home?" }
+        ]
+      }
+    ],
+    "variations": [
+      {
+        "form": "reinkommen",
+        "meaning": "to come in / to enter",
+        "usage": "Colloquial short form of 'hereinkommen' or 'hineinkommen'. Used almost exclusively in spoken German.",
+        "examples": [{ "de": "Darf ich reinkommen?", "en": "May I come in?" }]
+      },
+      {
+        "form": "bekommen",
+        "meaning": "to get / to receive",
+        "usage": "IMPORTANT: False friend! Does NOT mean 'to become'. It means receiving a gift, news, or a illness.",
+        "examples": [{ "de": "Ich habe eine E-Mail bekommen.", "en": "I received an email." }]
+      },
+      {
+        "form": "ankommen",
+        "meaning": "to arrive",
+        "usage": "Focuses on reaching a destination. Separable.",
+        "examples": [{ "de": "Der Zug kommt pünktlich an.", "en": "The train is arriving on time." }]
+      },
+      {
+        "form": "mitkommen",
+        "meaning": "to come along",
+        "usage": "Joining someone already in motion.",
+        "examples": [{ "de": "Kommst du mit?", "en": "Are you coming along?" }]
+      }
+    ],
+    "related_nouns": [
+      {
+        "word": "das Einkommen",
+        "meaning": "income / salary",
+        "usage": "Note: The verb 'einkommen' is rare and formal; usually 'Einkommen' refers to the money you earn monthly.",
+        "examples": [{ "de": "Sein Einkommen ist hoch.", "en": "His income is high." }]
+      }
+    ]
+  },
+  {
+    "word": "gehen",
+    "type": "Verb",
+    "category": "Verb",
+    "conjugation": "geht, ging, ist gegangen",
+    "grammar_notes": "Irregular verb. Always uses 'sein' in perfect tense. Frequently used impersonally: 'Es geht...'",
+    "meanings": [
+      {
+        "definition": "to go, to walk",
+        "usage": "Standard movement away from a place. Also used for physical functioning or general status.",
+        "examples": [
+          { "de": "Wie geht es dir?", "en": "How are you? (lit: How is it going for you?)" },
+          { "de": "Die Uhr geht nicht.", "en": "The clock isn't working." }
+        ]
+      }
+    ],
+    "variations": [
+      {
+        "form": "rausgehen",
+        "meaning": "to go out / leave",
+        "usage": "Colloquial for 'hinausgehen'. Standard for leaving a building or going out socially.",
+        "examples": [{ "de": "Wir gehen heute Abend raus.", "en": "We're going out tonight." }]
+      },
+      {
+        "form": "vergehen",
+        "meaning": "to pass (time) / fade",
+        "usage": "Inseparable. Used for time passing or appetite/pain fading.",
+        "examples": [{ "de": "Die Zeit vergeht schnell.", "en": "Time passes quickly." }]
+      },
+      {
+        "form": "nachgehen",
+        "meaning": "to pursue / follow / be slow",
+        "usage": "Separable. Used for pursuing a hobby or a clock that is slow.",
+        "examples": [{ "de": "Ich gehe meinem Hobby nach.", "en": "I pursue my hobby." }]
+      }
+    ]
+  },
+  {
+    "word": "wissen",
+    "type": "Verb",
+    "category": "Verb",
+    "conjugation": "weiß, wusste, hat gewusst",
+    "grammar_notes": "A 'mixed' verb with vowel changes. Use for facts, information, or things you can summarize with 'dass' (that).",
+    "meanings": [
+      {
+        "definition": "to know (facts)",
+        "usage": "Contrast with 'kennen' (familiarity with people/places).",
+        "examples": [
+          { "de": "Ich weiß das nicht.", "en": "I don't know that." }
+        ]
+      }
+    ],
+    "variations": [
+      {
+        "form": "Bescheid wissen",
+        "meaning": "to be informed / in the loop",
+        "usage": "Very common idiom in professional or social settings.",
+        "examples": [{ "de": "Ich weiß Bescheid.", "en": "I know the situation / I'm informed." }]
+      },
+      {
+        "form": "auswendig wissen",
+        "meaning": "to know by heart",
+        "usage": "Used for memorized information like phone numbers or poems.",
+        "examples": [{ "de": "Er weiß das Gedicht auswendig.", "en": "He knows the poem by heart." }]
+      }
+    ]
+  }
+]
