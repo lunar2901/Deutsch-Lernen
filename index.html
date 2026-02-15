@@ -264,25 +264,23 @@
 
         feedback.style.display = "block";
 
-        if (userVal === correct.toLowerCase()) {
-            feedback.innerHTML = `✅ Richtig! "${correct}" ist korrekt.`;
-            feedback.style.color = var(--success);
-            feedback.style.backgroundColor = "#E6FFF9";
-            input.style.borderColor = var(--success);
-            
-            // Auto-advance
-            setTimeout(() => move(1), 1500);
-        } else {
-            input.classList.add('shake');
-            setTimeout(() => input.classList.remove('shake'), 400);
-            feedback.innerHTML = `❌ Nicht ganz. Die Antwort ist "${correct}".`;
-            feedback.style.color = var(--error);
-            feedback.style.backgroundColor = "#FFE6E6";
-            input.value = "";
-            input.placeholder = `Fängt mit "${correct[0]}" an...`;
-        }
-    }
-
+        // CORRECTED CODE
+if (userVal === correct.toLowerCase()) {
+    feedback.innerHTML = `✅ Richtig! "${correct}" ist korrekt.`;
+    feedback.style.color = "var(--success)";       // Added quotes
+    feedback.style.backgroundColor = "#E6FFF9";
+    input.style.borderColor = "var(--success)";    // Added quotes
+    
+    setTimeout(() => move(1), 1500);
+} else {
+    input.classList.add('shake');
+    setTimeout(() => input.classList.remove('shake'), 400);
+    feedback.innerHTML = `❌ Nicht ganz. Die Antwort ist "${correct}".`;
+    feedback.style.color = "var(--error)";         // Added quotes
+    feedback.style.backgroundColor = "#FFE6E6";
+    input.value = "";
+    input.placeholder = `Fängt mit "${correct[0]}" an...`;
+}
     function move(step) {
         currentIndex = (currentIndex + step + vocabData.length) % vocabData.length;
         render();
