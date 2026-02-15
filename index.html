@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>Deutsch Pro</title>
+    <style>
+        :root {
+            --ios-blue: #007AFF;
+            --ios-bg: #F2F2F7;
+            --card-bg: #FFFFFF;
+            --text-main: #1C1C1E;
+            --text-sec: #8E8E93;
+            --accent: #34C759;
+            --der: #007AFF; /* Blue for masculine */
+            --die: #FF2D55; /* Red for feminine */
+            --das: #5856D6; /* Purple for neutral */
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--ios-bg);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .app-container { width: 100%; max-width: 500px; }
+
+        header { margin-bottom: 20px; text-align: center; }
+
+        .search-bar {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            border: none;
+            background: #E3E3E8;
+            margin-bottom: 20px;
+            font-size: 17px;
+            box-sizing: border-box;
+            outline: none;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            margin-bottom: 15px;
+        }
+
+        .word-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .word { font-size: 26px; font-weight: 800; }
+        .type { font-size: 12px; color: var(--text-sec); text-transform: uppercase; border: 1px solid #DDD; padding: 2px 6px; border-radius: 4px; }
+
+        /* Article colors */
+        .der { color: var(--der); }
+        .die { color: var(--die); }
+        .das { color: var(--das); }
+
+        .conjugation { color: #555; font-size: 14px; font-style: italic; margin-bottom: 10px; }
+        
+        .meaning-section {
+            border-top: 1px solid #F2F2F7;
+            padding-top: 12px;
+            margin-top: 10px;
+        }
+
+        .definition { font-weight: 600; color: var(--text-main); font-size: 18px; }
+        
+        .example-de { color: #333; margin-top: 8px; display: block; padding-left: 10px; border-left: 2px solid var(--ios-blue); }
+        .example-en { font-size: 14px; color: var(--text-sec); display: block; padding-left: 12px; }
+
+        .variations-container {
+            margin-top: 15px;
+            padding: 10px;
+            background: #F8F9FF;
+            border-radius: 10px;
+        }
+
+        .var-badge {
+            display: inline-block;
+            background: var(--ios-blue);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <header>
+        <h1>Deutsch Pro</h1>
+    </header>
+
+    <input type="text" id="searchInput" class="search-bar" placeholder="Suchen... (z.B. kommen, Haus)">
+
+    <div id="wordList">
+        <p style="text-align:center; color: var(--text-sec);">Lade Vokabeln...</p>
+    </div>
+</div>
+
+<script>
+    let vocabData = [];
+
+    // 1. Fetch the JSON file from your GitHub repository
+    async function loadVocab() {
+        try {
+            // Replace with your actual file name if different
+            const response = await fetch('german-vocab-1000.json'); 
+            vocabData = await response.json();
+            renderWords();
+        } catch (error) {
+            console.error("Error loading JSON:", error);
+            document.getElementById('wordList').innerHTML = `<p style="color:red">Fehler beim Laden der Datei. Stellen Sie sicher, dass die JSON-Datei im selben Ordner liegt.</p>`;
+        }
+    }
+
+    function renderWords(filter = "") {
+        const container = document.getElementById('wordList');
+        container.innerHTML = "";
+
+        const filtered = vocabData.filter(item => 
+            item.word.toLowerCase().includes(filter.toLowerCase()) ||
+            (item.meanings[0].definition && item.meanings[0].definition.toLowerCase().includes(filter.toLowerCase()))
+        );
+
+        if (filtered.length === 0) {
+            container.innerHTML = `<p style="text-align:center; color:var(--text-sec);">Keine Ergebnisse gefunden.</p>`;
+            return;
+        }
+
+        filtered.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            
+            // Determine article color if it's a noun
+            let articleClass = "";
+            if(item.article) articleClass = item.article.toLowerCase();
+
+            card.innerHTML = `
+                <div class="word-header">
+                    <span class="word ${articleClass}">${item.article ? item.article + ' ' : ''}${item.word}</span>
+                    <span class="type">${item.category || item.type}</span>
+                </div>
+                ${item.conjugation ? `<div class="conjugation">${item.conjugation}</div>` : ''}
+                ${item.plural && item.plural !== '-' ? `<div class="conjugation">Plural: ${item.plural}</div>` : ''}
+                
+                <div class="meaning-section">
+                    <div class="definition">${item.meanings[0].definition}</div>
+                    <span class="example-de">${item.meanings[0].examples[0]?.de || ''}</span>
+                    <span class="example-en">${item.meanings[0].examples[0]?.en || ''}</span>
+                </div>
+
+                ${item.variations && item.variations.length > 0 ? `
+                    <div class="variations-container">
+                        <strong>Variationen:</strong>
+                        ${item.variations.map(v => `
+                            <div style="margin-top:8px;">
+                                <span class="var-badge">${v.form}</span> <span>${v.meaning}</span>
+                            </div>
+                        `).join('')}
+                    </div>
+                ` : ''}
+            `;
+            container.appendChild(card);
+        });
+    }
+
+    // Search event listener
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+        renderWords(e.target.value);
+    });
+
+    // Start
+    loadVocab();
+</script>
+
+</body>
+</html>
